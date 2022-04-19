@@ -4,12 +4,21 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'elizabeth-portfolio',
+    title: 'Elizabeth Nthena',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Makeup Artist | Limitless. Bold. Brilliant.',
+      },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'keywords',
+        content:
+          'makeup, make-up, makeup artist, make-up artist, artist, makeup artist in kenya',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -21,13 +30,13 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Love+Light&family=Work+Sans:wght@300;400;600&family=Bebas+Neue&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Love+Light&family=Work+Sans:wght@300;400;600&family=Fjalla+One&display=swap',
       },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/styles/tailwind.scss'],
+  css: ['~/assets/styles/global.scss', '~/assets/styles/reset.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -40,8 +49,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
     '@nuxtjs/style-resources',
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -63,6 +72,11 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+      name: 'Elizabeth Nthena',
+      short_name: 'E.N',
+      description: 'Makeup Artist | Limitless. Bold. Brilliant.',
+      theme_color: '#bd604f',
+      background_color: '#fffefe',
     },
   },
 
