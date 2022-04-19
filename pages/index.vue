@@ -1,14 +1,12 @@
 <template>
-  <section class="home">
-    <header>
-      <h1>Elizabeth Nthena</h1>
-    </header>
-  </section>
+  <empty-state />
 </template>
 
 <script>
+import EmptyState from '~/components/EmptyState.vue'
 export default {
   name: 'HomePage',
+  components: { EmptyState },
   layout: 'default',
 }
 </script>
