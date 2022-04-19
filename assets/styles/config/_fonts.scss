@@ -1,0 +1,33 @@
+$body: 'Work Sans', sans-serif;
+$heading: 'Fjalla One', sans-serif;
+$display: 'Butler Stencil';
+
+$body-font: (
+  'family': $body,
+  'light': 300,
+  'normal': 400,
+  'bold': 600,
+);
+
+$heading-font: (
+  'family': $heading,
+);
+
+$scale: (
+  'base': 16px,
+  'display': 5.6rem,
+  'h1': 4.2rem,
+  'h2': 3.2rem,
+  'h3': 2.4rem,
+  'h4': 1.7rem,
+  'h5': 1.3rem,
+  'small': 0.75rem,
+);
+
+@function font-size($el) {
+  @return map-get($map: $scale, $key: $el);
+}
+
+@function body-fam($b) {
+  @return map-get($map: $body-font, $key: $b);
+}
