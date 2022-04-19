@@ -1,0 +1,28 @@
+$primaries: (
+  'light': #e9cac4,
+  'dark': #311712,
+  'main': #bd604f,
+);
+
+$secondaries: (
+  'light': #d0e9ed,
+  'dark': #122c31,
+  'main': #4facbd,
+);
+
+$neutrals: (
+  'white': #fffefe,
+  'gray': #5d4c51,
+  'dark-gray': #0d0a0b,
+  'black': #060505,
+);
+
+@function primary($type) {
+  @return map-get($map: $primaries, $key: $type);
+}
+@function secondary($type) {
+  @return map-get($map: $secondaries, $key: $type);
+}
+@function neutral($type) {
+  @return map-get($map: $neutrals, $key: $type);
+}
