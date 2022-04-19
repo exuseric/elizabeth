@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Butler Stencil';
+  src: url('./assets/fonts/butler_regular_stencil-webfont.woff2')
+      format('woff2'),
+    url('./assets/fonts/butler_regular_stencil-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: body-fam('family');
+  font-weight: body-fam('normal');
+
+  color: neutral('dark-gray');
+  background-color: neutral('white');
+
+  background-image: url('~/assets/images/vertical-2.png');
+  background-position: left 50%;
+  background-size: auto 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $heading;
+}
+
+.icon {
+  @include center-grid;
+
+  width: $icon-button;
+  height: $icon-button;
+
+  font-size: font-size('h5');
+
+  // background: red;
+
+  & > svg {
+    width: inherit;
+    height: inherit;
+  }
+}
