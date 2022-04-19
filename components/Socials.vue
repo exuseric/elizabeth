@@ -70,7 +70,7 @@ a {
   @include grid-flow(
     $flow: column,
     $gap: 0.125rem,
-    $justify: space-evenly,
+    $justify: space-between,
     $align: center
   );
   font-size: font-size('h6');
