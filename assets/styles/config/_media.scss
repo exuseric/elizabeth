@@ -1,11 +1,26 @@
-@mixin mid-screen {
-  @media only screen and (min-width: 1224px) {
+@use 'functions' as *;
+
+// Breakpoints: 700px, 900px, 1440px
+$breakpoints: (
+  'medium': em(700),
+  'large': em(900),
+  'x-large': em(1440),
+);
+
+$breakpoints-up: (
+  'medium': em(79.98),
+  'large': em(899.98),
+  'x-large': em(1399.98),
+);
+
+@mixin screen($size) {
+  @media only screen and (min-width: map-get($breakpoints, $size)) {
     @content;
   }
 }
 
-@mixin large-screen {
-  @media only screen and (min-width: 1824px) {
+@mixin screen-up($size) {
+  @media only screen and (max-width: map-get($breakpoints, $size)) {
     @content;
   }
 }
