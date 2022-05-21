@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="content">
+    <PageNavigation />
+    <div>
       <Nuxt />
     </div>
   </div>
