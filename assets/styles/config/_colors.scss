@@ -1,28 +1,19 @@
-$primaries: (
-  'light': #e9cac4,
-  'dark': #311712,
-  'main': #bd604f,
-);
+$primary-50: #e9cac4;
+$primary-500: #bd604f;
+$primary-900: #311712;
 
-$secondaries: (
-  'light': #d0e9ed,
-  'dark': #122c31,
-  'main': #4facbd,
-);
+$neutral-50: #fffefe;
+$neutral-500: #5d4c51;
+$neutral-900: #060505;
 
-$neutrals: (
-  'white': #fffefe,
-  'gray': #5d4c51,
-  'dark-gray': #0d0a0b,
-  'black': #060505,
-);
+$warning-50: #ffec99;
+$warning-500: #fcc419;
+$warning-900: #342c13;
 
-@function primary($type) {
-  @return map-get($map: $primaries, $key: $type);
-}
-@function secondary($type) {
-  @return map-get($map: $secondaries, $key: $type);
-}
-@function neutral($type) {
-  @return map-get($map: $neutrals, $key: $type);
-}
+$info-50: #a5d8ff;
+$info-500: #339af0;
+$info-900: #122433;
+
+$danger-50: #ffc9c9;
+$danger-500: #ff6b6b;
+$danger-900: #341313;
