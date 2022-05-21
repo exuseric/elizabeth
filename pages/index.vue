@@ -1,12 +1,12 @@
 <template>
-  <empty-state />
+  <main class="home">
+    <IndexPageHeader />
+  </main>
 </template>
 
 <script>
-import EmptyState from '~/components/EmptyState.vue'
 export default {
   name: 'HomePage',
-  components: { EmptyState },
   layout: 'default',
 }
 </script>
