@@ -4,7 +4,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Elizabeth Nthena',
+    title: 'Makeup Artist',
+    titleTemplate: 'Elizabeth Nthena - %s',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -30,7 +31,7 @@ export default {
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Love+Light&family=Work+Sans:wght@300;400;600&family=Fjalla+One&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Commissioner:wght@100;400;600;900&display=swap',
       },
     ],
   },
@@ -51,6 +52,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

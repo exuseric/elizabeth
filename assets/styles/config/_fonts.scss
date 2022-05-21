@@ -1,6 +1,5 @@
-$body: 'Work Sans', sans-serif;
-$heading: 'Fjalla One', sans-serif;
-$display: 'Butler Stencil';
+$heading: 'Commissioner', 'sans serif';
+$body: 'Commissioner', 'sans serif';
 
 $body-font: (
   'family': $body,
@@ -24,10 +23,12 @@ $scale: (
   'small': 0.75rem,
 );
 
-@function font-size($el) {
+@function scale($el) {
   @return map-get($map: $scale, $key: $el);
 }
 
-@function body-fam($b) {
-  @return map-get($map: $body-font, $key: $b);
+h1,
+h2 {
+  font-weight: 600;
+  line-height: 1.125;
 }
