@@ -1,0 +1,78 @@
+@use 'media' as *;
+@use 'functions' as f;
+
+@mixin center {
+  display: grid;
+  place-content: center;
+}
+
+@mixin content-grid {
+  max-width: f.rem(350);
+  margin: auto;
+
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(6, f.rem(55));
+  gap: f.rem(4);
+
+  @include screen('medium') {
+    max-width: f.rem(700);
+    margin: auto;
+
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(6, f.rem(115));
+    gap: f.rem(2);
+  }
+
+  @include screen('large') {
+    max-width: f.rem(1160);
+
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(12, f.rem(89));
+    gap: f.rem(12);
+  }
+
+  @include screen('x-large') {
+    max-width: f.rem(1800);
+
+    display: grid;
+    grid-auto-rows: auto;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(12, f.rem(139));
+    gap: f.rem(12);
+  }
+}
+
+.content {
+  max-width: f.rem(350);
+
+  margin: auto;
+  // padding: $section-padding 0;
+
+  @include screen('medium') {
+    max-width: f.rem(700);
+  }
+
+  @include screen('large') {
+    max-width: f.rem(1160);
+  }
+  @include screen('x-large') {
+    max-width: f.rem(1800);
+  }
+}
+
+@mixin flex-wrap-col {
+  display: flex;
+  flex-flow: column wrap;
+  justify-items: center;
+}
+@mixin flex-wrap-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+}
