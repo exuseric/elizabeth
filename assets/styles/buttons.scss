@@ -1,0 +1,61 @@
+@use 'config/colors' as *;
+
+.primary-btn,
+.sec-btn,
+.primary-btn-s,
+.sec-btn-s {
+  display: grid;
+  place-content: center;
+
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 1;
+
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+
+.primary-btn,
+.primary-btn-s {
+  color: $primary-50;
+  background-color: $primary-500;
+  border: 2px solid transparent;
+
+  &:hover {
+    color: $primary-50;
+    background-color: $primary-900;
+  }
+}
+
+.sec-btn-s,
+.sec-btn {
+  color: $primary-500;
+  background-color: $neutral-50;
+  border: 2px solid currentColor;
+
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+
+  &:hover {
+    color: $primary-900;
+  }
+}
+
+.primary-btn,
+.sec-btn {
+  font-family: family('heading');
+  font-size: scale('h5');
+  font-weight: 600;
+
+  padding: 15px 60px;
+  width: fit-content;
+}
+
+.sec-btn-s,
+.primary-btn-s {
+  font-family: family('body');
+  font-size: scale('body');
+
+  padding: 10px 20px;
+  width: fit-content;
+}
