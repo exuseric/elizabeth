@@ -19,8 +19,13 @@
         </div>
       </article>
       <div class="image">
-        <img
-          src="~/assets/images/header/main-header.png"
+        <nuxt-img
+          fit="contain"
+          quality="100"
+          format="webp"
+          width="1268"
+          height="1972"
+          src="/images/header/main-header.png"
           alt="composite of a woman with flowers on a red circle backdrop"
         />
       </div>
@@ -47,7 +52,7 @@ export default {
 
   @include screen('large') {
     @include center;
-    padding: $spacing-lg 0;
+    padding: $spacing-md 0;
     // min-height: 60rem;
   }
 
@@ -63,11 +68,11 @@ export default {
   @include screen('large') {
     @include content-grid;
     .title {
-      grid-column: 2 / 7;
+      grid-column: 1 / 7;
       grid-row: 1 / -1;
     }
     .image {
-      grid-column: 7 / -1;
+      grid-column: 8 / -1;
       grid-row: 1 / -1;
     }
   }
@@ -107,10 +112,6 @@ export default {
 
   margin: $spacing-md 0;
   width: fit-content;
-
-  @include screen(large) {
-    font-size: scale('h3');
-  }
 }
 .work {
   font-family: $heading;
@@ -155,7 +156,7 @@ export default {
   @include screen('large') {
     position: relative;
 
-    height: 50rem;
+    height: rem(600);
   }
 }
 </style>
