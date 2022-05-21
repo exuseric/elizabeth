@@ -7,8 +7,8 @@
         rel="noopener noreferrer"
         aria-disabled="true"
         disabled
+        aria-label="Message or connect on Instagram"
       >
-        <span class="text">Connect On Instagram.</span>
         <span class="icon">
           <Instagram aria-hidden="true" focusable="false" />
         </span>
@@ -21,8 +21,8 @@
         rel="noopener noreferrer"
         aria-disabled="true"
         disabled
+        aria-label="Message or call me on WhatsApp"
       >
-        <span class="text">Message On WhatsApp</span>
         <span class="icon">
           <WhatsApp aria-hidden="true" focusable="false" />
         </span>
@@ -35,8 +35,8 @@
         rel="noopener noreferrer"
         aria-disabled="true"
         disabled
+        aria-label="Call me on mobile"
       >
-        <span class="text">Give Me A Call</span>
         <span class="icon">
           <MobilePhone aria-hidden="true" focusable="false" />
         </span>
@@ -47,8 +47,8 @@
 
 <script>
 import Instagram from '~/assets/icons/instagram.svg?inline'
-import WhatsApp from '~/assets/icons/whatsapp.svg?inline'
-import MobilePhone from '~/assets/icons/smartphone.svg?inline'
+import WhatsApp from '~/assets/icons/bxl:whatsapp-square.svg?inline'
+import MobilePhone from '~/assets/icons/mobile.svg?inline'
 export default {
   name: 'SocialLinks',
   components: {
@@ -61,32 +61,35 @@ export default {
 
 <style lang="scss" scoped>
 ul {
-  @include flow($gap: $spacing-md, $column-width: $button-width);
+  @include flex-wrap-row;
+  gap: $spacing-sm;
 
-  margin: $spacing-md 0;
+  margin: 0;
   padding: 0;
+
+  width: fit-content;
 }
 a {
-  @include grid-flow(
-    $flow: column,
-    $gap: 0.125rem,
-    $justify: space-between,
-    $align: center
-  );
-  font-size: font-size('h6');
-  font-weight: 600;
+  @include center;
+  width: $icon-btn;
+  height: $icon-btn;
 
   text-decoration: none;
 
-  width: 100%;
-  height: $button-height;
+  font-size: scale('h5');
+  color: $neutral-900;
+  background-color: transparent;
 
-  padding: 0 $spacing-sm;
+  transition: all 0.35s cubic-bezier(0.47, 0, 0.745, 0.715);
 
-  color: neutral('black');
-  // background-color: secondary('main');
-  background: linear-gradient(65deg, primary('light'), secondary('light'));
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 
-  border-radius: 0.625rem;
+  &:hover {
+    color: $primary-500;
+    border-color: currentColor;
+  }
 }
 </style>
