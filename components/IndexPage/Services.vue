@@ -66,15 +66,20 @@ export default {
   width: fit-content;
 
   h2 {
-    font-size: scale('h1');
+    font-size: scale('h2');
     font-weight: 900;
     letter-spacing: rem(0.1);
     text-transform: uppercase;
     line-height: 0.8;
-    color: $primary-500;
+    color: $neutral-500;
+    width: fit-content;
   }
   @include screen-up(medium) {
-    width: 100%;
+    text-align: center;
+  }
+
+  @include screen(large) {
+    font-size: scale('h1');
   }
 }
 
@@ -153,9 +158,9 @@ export default {
 
   color: $neutral-500;
 
-  padding: $spacing-md;
+  // padding: $spacing-md;
 
-  font-size: scale('h3');
+  font-size: scale('h4');
   font-weight: 900;
   text-transform: uppercase;
 }
