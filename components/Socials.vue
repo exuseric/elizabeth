@@ -77,7 +77,7 @@ a {
   text-decoration: none;
 
   font-size: scale('h5');
-  color: $neutral-900;
+  color: inherit;
   background-color: transparent;
 
   transition: all 0.35s cubic-bezier(0.47, 0, 0.745, 0.715);
