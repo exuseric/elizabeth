@@ -3,10 +3,10 @@
     <section class="hero__content">
       <article class="title">
         <div class="title__heading">
-          <h1 class="name mark">Elizabeth Nthena <br />Makeup Artist</h1>
-          <h2 class="work">
+          <h1 class="work">
             Let's express who you are on the inside with limitless possibilities
-          </h2>
+          </h1>
+          <h1 class="name">Elizabeth Nthena &mdash; Makeup Artist</h1>
         </div>
         <div class="title__contact">
           <nuxt-link to="/contact" class="contact__btn primary-btn">
@@ -119,9 +119,9 @@ export default {
   font-size: scale('h4');
   font-weight: 600;
 
-  color: $neutral-900;
+  color: $primary-500;
 
-  margin: $spacing-md 0;
+  margin-top: $spacing-md;
   width: fit-content;
 }
 .work {
