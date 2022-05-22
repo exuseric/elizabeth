@@ -57,6 +57,7 @@ export default {
 
   min-height: $nav-height;
   height: fit-content;
+  padding: $spacing-md;
 
   background-color: $neutral-50;
 }
@@ -69,7 +70,7 @@ export default {
     grid-column: 1 / -1;
 
     @include screen('large') {
-      grid-column: 1 / 3;
+      grid-column: 1 / 4;
     }
   }
 
@@ -89,8 +90,9 @@ export default {
   justify-content: space-between;
 
   width: 100%;
-  padding: $spacing-md 0;
+  // padding: $spacing-md 0;
 }
+
 .bottom {
   position: absolute;
   top: $nav-height;
@@ -122,6 +124,7 @@ export default {
     padding: 0 $spacing-md;
 
     box-shadow: none;
+    background-color: transparent;
 
     height: 100%;
   }

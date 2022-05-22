@@ -19,10 +19,11 @@ export default {
 .logo-link {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-flex-end;
-  justify-content: flex-flex-end;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: $spacing-md;
 
-  color: $neutral-900;
+  color: $primary-500;
 
   width: fit-content;
   height: fit-content;
@@ -34,14 +35,12 @@ export default {
 
   .txt {
     font-size: $body;
-
-    align-self: center;
   }
 }
 
 .logo-link img {
   width: $icon-btn;
-  height: calc($icon-btn / 1.5);
+  height: $icon-btn;
 
   object-fit: contain;
   object-position: center;
@@ -49,8 +48,8 @@ export default {
 
 .logo-link:hover,
 .logo-link:focus-visible {
-  color: $primary-50;
-  background-color: $primary-500;
+  color: $neutral-50;
+  background-color: $neutral-900;
   outline-color: $primary-900;
 }
 </style>
