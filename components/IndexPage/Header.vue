@@ -53,12 +53,12 @@ export default {
   @include screen('large') {
     @include center;
     padding: $spacing-md 0;
-    // min-height: 60rem;
+    min-height: 40rem;
   }
 
   @include screen('x-large') {
     @include center;
-    // min-height: 70rem;
+    min-height: 60rem;
   }
 }
 
@@ -73,6 +73,17 @@ export default {
     }
     .image {
       grid-column: 8 / -1;
+      grid-row: 1 / -1;
+    }
+  }
+
+  @include screen('x-large') {
+    .title {
+      grid-column: 2 / 6;
+      grid-row: 1 / -1;
+    }
+    .image {
+      grid-column: 8 / -2;
       grid-row: 1 / -1;
     }
   }
