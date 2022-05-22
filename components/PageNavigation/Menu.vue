@@ -58,6 +58,7 @@ export default {
 
       a {
         font-size: scale('base');
+        font-weight: 400;
         padding: $spacing-sm;
       }
     }
