@@ -1,8 +1,6 @@
 <template>
   <footer>
-    <div class="content">
-      <footer-menu class="menu" />
-
+    <div class="wrapper">
       <div class="copyright">
         <logo-link />
         <p>
@@ -11,6 +9,7 @@
           }}&nbsp;Elizabeth Nthena. All Rights Reserved.
         </p>
       </div>
+      <footer-menu class="menu" />
     </div>
   </footer>
 </template>
@@ -26,36 +25,27 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  background-color: $neutral-900;
+  background-color: $neutral-50;
+
+  @include screen(medium) {
+    padding: $spacing-md $spacing-lg;
+  }
+  @include screen(large) {
+    padding: $spacing-md;
+  }
 }
 
-.content {
+.wrapper {
   padding: 0;
   @include screen(large) {
-    @include content-grid;
+    @include grid-flow-col;
     padding: $spacing-lg 0;
 
-    .menu,
     .copyright {
-      grid-row: 1 / -1;
-    }
-
-    .copyright {
-      grid-column: 1 / 5;
       align-self: start;
     }
     .menu {
-      grid-column: 6 / -2;
-    }
-  }
-
-  @include screen(x-large) {
-    .copyright {
-      grid-column: 2 / 6;
-      align-self: start;
-    }
-    .menu {
-      grid-column: 7 / -2;
+      min-width: rem(700);
     }
   }
 }
@@ -64,7 +54,7 @@ footer {
   @include flex-wrap-col;
   gap: $spacing-sm;
 
-  color: $neutral-50;
+  color: $neutral-500;
   padding: $spacing-lg 0;
 
   @include screen(large) {

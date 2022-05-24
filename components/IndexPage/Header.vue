@@ -1,6 +1,6 @@
 <template>
   <header class="hero">
-    <section class="hero__content">
+    <div class="wrapper">
       <article class="title">
         <div class="title__heading">
           <h1 class="work">
@@ -29,7 +29,7 @@
           alt="composite of a woman with flowers on a red circle backdrop"
         />
       </div>
-    </section>
+    </div>
   </header>
 </template>
 
@@ -46,128 +46,123 @@ export default {
 
   // min-height: 40rem;
   height: fit-content;
+  padding: 0;
+  margin: 0;
 
   background: $neutral-50;
-  overflow-x: hidden;
-
-  @include screen('large') {
-    @include center;
-    padding: $spacing-md 0;
-    min-height: 40rem;
-  }
-
-  @include screen('x-large') {
-    @include center;
-    min-height: 60rem;
-  }
+  // overflow-x: hidden;
 }
 
-.hero__content {
-  height: fit-content;
+.wrapper {
+  @include content-grid;
+  position: relative;
+  z-index: 1;
 
-  @include screen('large') {
-    @include content-grid;
+  padding: $spacing-lg 0;
+
+  height: rem(1000);
+
+  .title,
+  .image {
+    grid-column: 1 / -1;
+  }
+
+  @include screen(medium) {
+    height: rem(500);
+
+    .title {
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+    }
+    .image {
+      grid-column: -4 / -1;
+      grid-row: 1 / -1;
+      z-index: -1;
+      margin-top: rem(200);
+    }
+  }
+  @include screen(large) {
+    height: rem(600);
+
     .title {
       grid-column: 1 / 7;
       grid-row: 1 / -1;
     }
     .image {
+      justify-self: space-between;
       grid-column: 8 / -1;
       grid-row: 1 / -1;
+      margin-top: 0;
     }
   }
 
-  @include screen('x-large') {
-    .title {
-      grid-column: 2 / 6;
-      grid-row: 1 / -1;
-    }
-    .image {
-      grid-column: 8 / -2;
-      grid-row: 1 / -1;
-    }
-  }
-}
-
-.title {
-  @include content-grid;
-  row-gap: 2.25rem;
-
-  padding: $spacing-lg 0;
-
-  &__heading {
-    grid-column: 1 / -1;
-    justify-self: center;
-    align-self: center;
-  }
-
-  &__contact {
-    grid-column: 1 / -1;
-  }
-
-  @include screen(medium) {
-    row-gap: 2.25rem;
-  }
-
-  @include screen('large') {
-    max-width: 100%;
-    display: block;
-  }
-}
-
-.name {
-  font-size: scale('h4');
-  font-weight: 600;
-
-  color: $primary-500;
-
-  margin-top: $spacing-md;
-  width: fit-content;
-}
-.work {
-  font-family: $heading;
-  font-weight: 900;
-  font-size: scale('h2');
-
-  color: $neutral-900;
-}
-
-.title__contact {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.25rem;
-
-  width: 100%;
-
-  @include screen('large') {
-    padding: $spacing-lg 0;
+  @include screen(x-large) {
+    height: rem(700);
   }
 }
 
 .image {
-  position: relative;
-  z-index: -1;
+  width: rem(300);
+  height: auto;
+  margin: auto;
 
-  width: auto;
-  height: 25rem;
-  // max-height: inherit;
-
-  img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
+  @include screen(large) {
+    width: rem(450);
+    height: auto;
   }
+
+  @include screen(x-large) {
+    width: rem(550);
+    height: auto;
+  }
+}
+
+.title {
+  align-self: start;
+  max-width: rem(800);
+  padding: $spacing-lg 0;
+
+  .name {
+    font-size: scale('h5');
+    font-weight: 400;
+
+    color: $primary-500;
+
+    margin-top: $spacing-md;
+    width: fit-content;
+  }
+
+  .work {
+    font-family: $heading;
+    font-weight: 100;
+    font-size: scale('h2');
+
+    color: $neutral-900;
+
+    @include screen(x-large) {
+      font-size: scale('h1');
+    }
+  }
+
+  @include screen(large) {
+    max-width: 100%;
+  }
+}
+
+.title__contact {
+  @include flex-wrap-row;
+  gap: 1.25rem;
+
+  width: 100%;
+  padding-top: $spacing-lg;
 
   @include screen(medium) {
-    height: 35rem;
+    max-width: rem(400);
   }
-  @include screen('large') {
-    position: relative;
 
-    height: rem(600);
+  @include screen('large') {
+    padding: $spacing-lg 0;
+    max-width: 100%;
   }
 }
 </style>

@@ -71,7 +71,7 @@ ul {
   .main-link {
     font-size: scale('h5');
     font-weight: 600;
-    color: $neutral-50;
+    color: $neutral-900;
   }
 
   .socials {
@@ -93,7 +93,7 @@ ul {
     padding: $spacing-sm * 0.5 0;
   }
   a {
-    color: $neutral-50;
+    color: $neutral-500;
   }
 }
 </style>

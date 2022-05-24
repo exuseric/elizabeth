@@ -90,22 +90,23 @@ img {
   text-decoration: none;
   line-height: 1.125;
 
-  transition: all $transition;
+  transition: all 0.3s $transition;
 
   &::before {
     content: '';
     position: absolute;
-    bottom: 15%;
+    bottom: 0%;
     left: 50%;
     z-index: -1;
 
     height: 0.15rem;
-    width: 0;
+    width: 100%;
 
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%) scaleX(0.65);
     transform-origin: center;
-    transition: width $transition;
+    transition: transform 0.25s $transition, opacity 0.1s $transition;
     background-color: currentColor;
+    opacity: 0;
 
     border-radius: 30px;
   }
@@ -113,14 +114,15 @@ img {
 
 .link:hover {
   color: $primary-500;
-  // background-color: $primary-900;
 
   &::before {
-    width: 75%;
+    transform: translate(-50%, -50%) scaleX(0.95);
+    opacity: 1;
   }
 }
+
 .link:focus-visible,
-.primary-btn:focus-visible,
+button:focus-visible,
 a:focus-visible {
   color: neutral('50');
   background-color: $primary-500;

@@ -64,6 +64,7 @@ export default {
     }
   }
 }
+
 .nuxt-link-exact-active {
   position: relative;
   color: $primary-500;

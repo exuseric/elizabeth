@@ -5,10 +5,11 @@
         fit="cover"
         format="webp"
         quality="80"
-        width="400"
-        height="400"
+        width="1500"
+        height="1500"
         :src="`/images/services/${image}`"
         :alt="alt"
+        is-progressive="true"
       />
     </div>
     <header class="card__header">
@@ -59,6 +60,8 @@ export default {
 .card {
   width: 100%;
   height: 100%;
+
+  padding: $spacing-sm;
 
   // border: rem(10) solid $primary-50;
   background-color: transparent;

@@ -1,6 +1,6 @@
 <template>
   <header :class="`nav ${isMenuOpen ? 'nav-open' : 'nav-closed'}`">
-    <div class="nav__child">
+    <div class="nav__child wrapper">
       <div class="top">
         <LogoLink />
         <button class="toggle-btn" @click="isMenuOpen = !isMenuOpen">
@@ -55,6 +55,7 @@ export default {
   top: 0;
   z-index: 99;
 
+  width: 100%;
   min-height: $nav-height;
   height: fit-content;
   padding: $spacing-md;
@@ -63,23 +64,27 @@ export default {
 }
 
 .nav__child {
-  @include content-grid;
-  height: fit-content;
+  // @include content-grid;
+  // height: fit-content;
 
-  .top {
-    grid-column: 1 / -1;
+  // .top {
+  //   grid-column: 1 / -1;
 
-    @include screen('large') {
-      grid-column: 1 / 4;
-    }
-  }
+  //   @include screen('large') {
+  //     grid-column: 1 / 4;
+  //   }
+  // }
 
-  .bottom {
-    grid-column: 1 / -1;
+  // .bottom {
+  //   grid-column: 1 / -1;
 
-    @include screen('large') {
-      grid-column: 4 / -1;
-    }
+  //   @include screen('large') {
+  //     grid-column: 4 / -1;
+  //   }
+  // }
+
+  @include screen(large) {
+    @include grid-flow-col;
   }
 }
 
@@ -116,17 +121,23 @@ export default {
   @include screen('large') {
     position: relative;
     top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: fit-content;
+    height: 100%;
+
+    justify-self: end;
 
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 $spacing-md;
+    padding: 0;
 
     box-shadow: none;
     background-color: transparent;
-
-    height: 100%;
   }
 }
 

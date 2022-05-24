@@ -23,32 +23,33 @@
     display: grid;
     grid-auto-rows: auto;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(6, f.rem(115));
-    gap: f.rem(2);
+    grid-template-columns: repeat(6, f.rem(116.66));
+    gap: f.rem(0);
   }
 
   @include screen('large') {
-    max-width: f.rem(1160);
+    max-width: f.rem(1200);
+    margin: auto;
 
     display: grid;
     grid-auto-rows: auto;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(12, f.rem(89));
-    gap: f.rem(12);
+    grid-template-columns: repeat(12, f.rem(100));
+    gap: f.rem(0);
   }
 
   @include screen('x-large') {
-    max-width: f.rem(1800);
+    max-width: f.rem(1700);
 
     display: grid;
     grid-auto-rows: auto;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(12, f.rem(139));
-    gap: f.rem(12);
+    grid-template-columns: repeat(12, f.rem(141.66));
+    gap: f.rem(0);
   }
 }
 
-.content {
+.wrapper {
   max-width: f.rem(350);
 
   margin: auto;
@@ -59,10 +60,10 @@
   }
 
   @include screen('large') {
-    max-width: f.rem(1160);
+    max-width: f.rem(1200);
   }
   @include screen('x-large') {
-    max-width: f.rem(1800);
+    max-width: f.rem(1700);
   }
 }
 
@@ -75,4 +76,17 @@
   display: flex;
   flex-flow: row wrap;
   justify-items: center;
+}
+
+@mixin grid-flow-col {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin grid-flow-row {
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/" class="logo-link">
+  <nuxt-link to="/" class="logo-link link">
     <img
       src="~/assets/logo/main.png"
       alt="A block abstract of the letter E and N"
@@ -23,10 +23,12 @@ export default {
   justify-content: space-between;
   gap: $spacing-md;
 
-  color: $primary-500;
+  color: $neutral-500;
 
   width: fit-content;
   height: fit-content;
+
+  padding: $spacing-sm;
 
   overflow: hidden;
 
@@ -39,17 +41,17 @@ export default {
 }
 
 .logo-link img {
-  width: $icon-btn;
-  height: $icon-btn;
+  width: $icon-btn * 0.65;
+  height: $icon-btn * 0.65;
 
   object-fit: contain;
   object-position: center;
 }
 
-.logo-link:hover,
-.logo-link:focus-visible {
-  color: $neutral-50;
-  background-color: $neutral-900;
-  outline-color: $primary-900;
-}
+// .logo-link:hover,
+// .logo-link:focus-visible {
+//   color: $neutral-50;
+//   background-color: $neutral-900;
+//   outline-color: $primary-900;
+// }
 </style>

@@ -3,7 +3,6 @@
     <header class="content__header">
       <h2 class="mark">What I Do</h2>
     </header>
-
     <div class="card-grid">
       <div class="card-grid__section">
         <service-card
@@ -56,13 +55,12 @@ export default {
 
   @include screen(large) {
     .content__header {
-      grid-column: 2 / -2;
+      grid-column: 1 / -1;
     }
   }
 }
 
 .content__header {
-  padding: $spacing-lg 0;
   width: fit-content;
 
   h2 {
@@ -73,13 +71,13 @@ export default {
     line-height: 0.8;
     color: $neutral-500;
     width: fit-content;
+
+    @include screen(x-large) {
+      font-size: scale('h1');
+    }
   }
   @include screen-up(medium) {
     text-align: center;
-  }
-
-  @include screen(large) {
-    font-size: scale('h1');
   }
 }
 
@@ -87,78 +85,50 @@ export default {
   @include content-grid;
   height: fit-content;
 
-  // padding: $spacing-lg 0;
+  padding: $section-padding 0;
   row-gap: $spacing-md;
 
   &__section {
     grid-column: 1 / -1;
-  }
-
-  @include screen(large) {
-    &__section {
-      grid-column: 2 / -2;
-    }
   }
 }
 
 .card-grid__section {
   display: grid;
   grid-template-rows: rem(400) rem(400) auto;
-  gap: $spacing-md;
+  row-gap: $spacing-md;
   padding: $spacing-lg 0;
 
-  @include screen(large) {
-    $col-count: 4;
-    $row-count: 6;
-
-    width: 100%;
-    height: fit-content;
-
-    margin: auto;
-
+  @include screen(medium) {
     display: grid;
-    grid-template-columns: repeat($col-count, math.div(55rem, $col-count));
-    grid-template-rows: repeat($row-count, math.div(30rem, $row-count));
-    justify-content: space-between;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 75% 1fr;
 
     .card {
-      grid-row: 2 / -1;
+      grid-row: 1 / -1;
     }
 
-    .card:nth-child(1) {
-      grid-column: 1 / 3;
-    }
-    .card:nth-child(2) {
-      grid-column: 3 / -1;
-    }
     .title {
-      @include center;
-      width: fit-content;
-
-      grid-row: 1 / 2;
       grid-column: 1 / -1;
-      justify-self: end;
-      z-index: 1;
+      align-self: end;
+      height: fit-content;
     }
   }
 
-  @include screen(x-large) {
-    $col-count: 4;
-
-    width: 100%;
-
-    display: grid;
-    grid-template-columns: repeat($col-count, math.div(81.25rem, $col-count));
-    justify-content: space-between;
+  @include screen(medium) {
+    height: rem(750);
   }
 }
 
 .card-grid__section > .title {
+  width: fit-content;
+  height: fit-content;
+
   text-align: left;
 
   color: $neutral-500;
 
-  // padding: $spacing-md;
+  margin: auto;
 
   font-size: scale('h4');
   font-weight: 900;

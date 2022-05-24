@@ -17,12 +17,11 @@
 
 .primary-btn,
 .primary-btn-s {
-  color: $primary-50;
+  color: $neutral-50;
   background-color: $primary-500;
   border: 2px solid transparent;
 
   &:hover {
-    color: $primary-50;
     background-color: $primary-900;
   }
 }
