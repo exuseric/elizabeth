@@ -1,10 +1,14 @@
 @use 'functions' as *;
 
-// Breakpoints: 700px, 900px, 1440px
-$breakpoints: (
-  'medium': em(700),
-  'large': em(900),
-  'x-large': em(1440),
+$breakpoint: (
+  //640px
+  small: 40em,
+  //1024px
+  medium: 64em,
+  //1440px
+  large: 90em,
+  //1920px
+  xlarge: 120em
 );
 
 $breakpoints-up: (
@@ -14,13 +18,13 @@ $breakpoints-up: (
 );
 
 @mixin screen($size) {
-  @media only screen and (min-width: map-get($breakpoints, $size)) {
+  @media only screen and (min-width: map-get($breakpoint, $size)) {
     @content;
   }
 }
 
 @mixin screen-up($size) {
-  @media only screen and (max-width: map-get($breakpoints, $size)) {
+  @media only screen and (max-width: map-get($breakpoints-up, $size)) {
     @content;
   }
 }

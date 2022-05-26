@@ -1,5 +1,6 @@
 @use 'media' as *;
 @use 'functions' as f;
+@use 'metrics' as m;
 
 @mixin center {
   display: grid;
@@ -7,63 +8,64 @@
 }
 
 @mixin content-grid {
-  max-width: f.rem(350);
+  max-width: f.rem(750);
   margin: auto;
+  padding: 0 m.$spacing-md;
 
   display: grid;
   grid-auto-rows: auto;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(6, f.rem(55));
+  grid-template-columns: repeat(6, 1fr);
   gap: f.rem(4);
 
   @include screen('medium') {
-    max-width: f.rem(700);
+    max-width: f.rem(950);
     margin: auto;
 
     display: grid;
     grid-auto-rows: auto;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(6, f.rem(116.66));
-    gap: f.rem(0);
+    grid-template-columns: repeat(12, f.rem(70));
+    gap: f.rem(10);
   }
 
   @include screen('large') {
-    max-width: f.rem(1200);
+    max-width: f.rem(1300);
     margin: auto;
 
     display: grid;
     grid-auto-rows: auto;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(12, f.rem(100));
-    gap: f.rem(0);
+    grid-template-columns: repeat(12, f.rem(101));
+    gap: f.rem(8);
   }
 
   @include screen('x-large') {
-    max-width: f.rem(1700);
+    max-width: f.rem(1750);
 
     display: grid;
     grid-auto-rows: auto;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(12, f.rem(141.66));
-    gap: f.rem(0);
+    grid-template-columns: repeat(12, f.rem(144));
+    gap: f.rem(2);
   }
 }
 
 .wrapper {
-  max-width: f.rem(350);
+  max-width: f.rem(750);
 
   margin: auto;
   // padding: $section-padding 0;
 
   @include screen('medium') {
-    max-width: f.rem(700);
+    max-width: f.rem(950);
   }
 
   @include screen('large') {
-    max-width: f.rem(1200);
+    max-width: f.rem(1300);
   }
   @include screen('x-large') {
-    max-width: f.rem(1700);
+    max-width: f.rem(1750);
   }
 }
 
