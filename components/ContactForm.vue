@@ -1,8 +1,8 @@
 <template>
   <article class="contact-form content-container">
-    <aside class="copy-container">
-      <div class="aside__info">
-        <h3 class="mark">Let's Talk</h3>
+    <aside class="">
+      <h3 class="mark">Let's Talk</h3>
+      <div class="aside__info copy-container">
         <p>
           Feel free to get in touch with me, I am always open to new ideas or
           opportunities to be part of your vision.
@@ -11,8 +11,8 @@
           If you have any questions, business propositions; just write me a
           message
         </p>
+        <Socials class="aside__social" />
       </div>
-      <Socials class="aside__social" />
     </aside>
     <form action="">
       <div class="form-group">

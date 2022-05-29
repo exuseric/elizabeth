@@ -3,7 +3,7 @@
     <div class="wrapper">
       <article class="title">
         <div class="title__heading">
-          <h1 class="work">Hey. What's up? Hello!</h1>
+          <h1 class="work">Questions. Business. Say Hi.</h1>
           <h1 class="name">Elizabeth Nthena &mdash; Makeup Artist</h1>
         </div>
         <!-- <div class="title__contact">
@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'AboutPageHeader',
+  name: 'ContactPageHeader',
 }
 </script>
 
@@ -77,7 +77,6 @@ export default {
       grid-column: 8 / -1;
       grid-row: 1 / -1;
       z-index: -1;
-      // margin-top: rem(100);
     }
   }
   @include screen(large) {
@@ -88,10 +87,9 @@ export default {
       grid-row: 1 / -1;
     }
     .image {
-      justify-self: space-between;
+      justify-self: end;
       grid-column: 8 / -1;
       grid-row: 1 / -1;
-      margin-top: 0;
     }
   }
 
