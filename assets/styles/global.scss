@@ -46,8 +46,9 @@ img {
   width: 100%;
 }
 
-.content-container {
-  margin: $section-padding 0;
+.copy-container {
+  max-width: 80ch;
+  padding: $section-padding-sm 0;
 }
 
 .icon-link {
@@ -132,17 +133,20 @@ a:focus-visible {
 .mark {
   position: relative;
   z-index: 1;
+  padding: $spacing-sm 0;
+
   &::before {
     content: '';
     position: absolute;
-    bottom: rem(-10);
+    bottom: 0;
     right: 0;
     left: 0;
     z-index: -1;
 
-    width: 100%;
-    height: rem(40);
+    width: 65%;
+    height: rem(5);
 
-    background-color: $primary-50;
+    background: linear-gradient(90deg, $primary-500, $danger-500, $warning-500);
+    border-radius: rem(30);
   }
 }

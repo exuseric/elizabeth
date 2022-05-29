@@ -64,7 +64,7 @@ export default {
   width: fit-content;
 
   h2 {
-    font-size: scale('h2');
+    font-size: scale('h3');
     font-weight: 900;
     letter-spacing: rem(0.1);
     text-transform: uppercase;

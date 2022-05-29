@@ -68,6 +68,23 @@
     max-width: f.rem(1750);
   }
 }
+.content-container {
+  max-width: f.rem(750);
+
+  margin: m.$section-padding auto;
+  // padding: $section-padding 0;
+
+  @include screen('medium') {
+    max-width: f.rem(950);
+  }
+
+  @include screen('large') {
+    max-width: f.rem(1300);
+  }
+  @include screen('x-large') {
+    max-width: f.rem(1750);
+  }
+}
 
 @mixin flex-wrap-col {
   display: flex;

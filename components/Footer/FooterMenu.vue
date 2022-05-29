@@ -8,7 +8,7 @@
       <nuxt-link to="/about" class="main-link">About</nuxt-link>
       <ul class="sub-menu">
         <li>
-          <nuxt-link to="/about#why">Why work together?</nuxt-link>
+          <nuxt-link to="/about#bio">Bio</nuxt-link>
         </li>
       </ul>
     </li>

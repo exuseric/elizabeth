@@ -1,0 +1,167 @@
+<template>
+  <header class="hero">
+    <div class="wrapper">
+      <article class="title">
+        <div class="title__heading">
+          <h1 class="work">Hey. What's up? Hello!</h1>
+          <h1 class="name">Elizabeth Nthena &mdash; Makeup Artist</h1>
+        </div>
+        <!-- <div class="title__contact">
+          <nuxt-link to="/contact" class="contact__btn primary-btn">
+            Hire Me
+          </nuxt-link>
+
+          <nuxt-link to="/gallery" class="sec-btn gallery-btn">
+            Gallery
+          </nuxt-link>
+        </div> -->
+      </article>
+      <div class="image">
+        <nuxt-img
+          fit="contain"
+          quality="100"
+          format="webp"
+          width="1000"
+          height="1000"
+          src="/images/header/about-header.png"
+          alt="composite of a woman with flowers on a red circle backdrop"
+        />
+      </div>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  name: 'IndexPageHeader',
+}
+</script>
+
+<style lang="scss" scoped>
+.hero {
+  position: relative;
+  z-index: 1;
+
+  // min-height: 40rem;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  background: $neutral-50;
+  // overflow-x: hidden;
+}
+
+.wrapper {
+  @include content-grid;
+  position: relative;
+  z-index: 1;
+
+  // padding: $spacing-lg 0;
+
+  height: rem(800);
+
+  .title,
+  .image {
+    grid-column: 1 / -1;
+    align-self: center;
+  }
+
+  @include screen(medium) {
+    height: rem(600);
+
+    .title {
+      grid-column: 1 / 9;
+      grid-row: 1 / -1;
+    }
+    .image {
+      grid-column: 8 / -1;
+      grid-row: 1 / -1;
+      z-index: -1;
+      // margin-top: rem(100);
+    }
+  }
+  @include screen(large) {
+    height: rem(800);
+
+    .title {
+      grid-column: 1 / 6;
+      grid-row: 1 / -1;
+    }
+    .image {
+      justify-self: space-between;
+      grid-column: 8 / -1;
+      grid-row: 1 / -1;
+      margin-top: 0;
+    }
+  }
+
+  @include screen(x-large) {
+    height: rem(700);
+  }
+}
+
+.image {
+  width: rem(300);
+  height: auto;
+  margin: auto;
+
+  @include screen(large) {
+    width: rem(450);
+    height: auto;
+  }
+
+  @include screen(x-large) {
+    width: rem(550);
+    height: auto;
+  }
+}
+
+.title {
+  align-self: start;
+  max-width: rem(800);
+  padding: $spacing-lg 0;
+
+  .name {
+    font-size: scale('h5');
+    font-weight: 400;
+
+    color: $primary-500;
+
+    margin-top: $spacing-md;
+    width: fit-content;
+  }
+
+  .work {
+    font-family: $heading;
+    font-weight: 100;
+    font-size: scale('h2');
+
+    color: $neutral-900;
+
+    @include screen(x-large) {
+      font-size: scale('h1');
+    }
+  }
+
+  @include screen(large) {
+    max-width: 100%;
+  }
+}
+
+.title__contact {
+  @include flex-wrap-row;
+  gap: 1.25rem;
+
+  width: 100%;
+  padding-top: $spacing-lg;
+
+  @include screen(medium) {
+    max-width: rem(400);
+  }
+
+  @include screen('large') {
+    padding: $spacing-lg 0;
+    max-width: 100%;
+  }
+}
+</style>
