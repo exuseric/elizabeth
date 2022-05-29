@@ -2,24 +2,22 @@
   <footer>
     <div class="wrapper">
       <div class="copyright">
-        <logo-link />
+        <LogoLink />
         <p>
           Copyright&nbsp;&copy;&nbsp;{{
             new Date().getFullYear()
           }}&nbsp;Elizabeth Nthena. All Rights Reserved.
         </p>
       </div>
-      <footer-menu class="menu" />
+      <!-- <footer-menu class="menu" /> -->
+      <FooterMenu class="menu" />
     </div>
   </footer>
 </template>
 
 <script>
-import FooterMenu from './FooterMenu.vue'
-import LogoLink from './PageNavigation/LogoLink.vue'
 export default {
-  name: 'MainFooter',
-  components: { LogoLink, FooterMenu },
+  name: 'PageFooter',
 }
 </script>
 

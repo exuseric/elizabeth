@@ -1,7 +1,12 @@
 <template>
   <ul class="menu">
     <li v-for="link in links" :key="link.ref">
-      <nuxt-link :to="link.ref" class="link">
+      <nuxt-link
+        :to="link.ref"
+        class="link"
+        :aria-disabled="link.disabled"
+        :disabled="link.disabled"
+      >
         {{ link.name }}
       </nuxt-link>
     </li>
@@ -14,10 +19,11 @@ export default {
   data() {
     return {
       links: [
-        { name: 'home', ref: '/' },
-        { name: 'services', ref: '/work' },
-        { name: 'about', ref: '/about' },
-        { name: 'contact', ref: '/contact' },
+        { name: 'home', ref: '/', disabled: false },
+        { name: 'services', ref: '/services', disabled: true },
+        { name: 'about', ref: '/about', disabled: false },
+        { name: 'contact', ref: '/contact', disabled: true },
+        { name: 'gallery', ref: '/gallery', disabled: true },
       ],
     }
   },
@@ -47,7 +53,7 @@ export default {
     }
   }
 
-  @include screen('large') {
+  @include screen(medium) {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;

@@ -1,5 +1,5 @@
 <template>
-  <section class="content">
+  <section class="content wrapper">
     <header class="content__header">
       <h2 class="mark">What I Do</h2>
     </header>
@@ -37,7 +37,7 @@
 <script>
 import ServiceCard from './ServiceCard.vue'
 export default {
-  name: 'ServicesSection',
+  name: 'IndexPageServices',
   components: { ServiceCard },
 }
 </script>
@@ -46,7 +46,7 @@ export default {
 @use 'sass:math';
 
 .content {
-  @include content-grid;
+  margin: $section-padding-lg auto;
 
   .card-grid,
   .content__header {
@@ -85,7 +85,7 @@ export default {
   @include content-grid;
   height: fit-content;
 
-  padding: $section-padding 0;
+  padding: $spacing-lg 0;
   row-gap: $spacing-md;
 
   &__section {

@@ -10,11 +10,11 @@
         </div>
         <div class="title__contact">
           <nuxt-link to="/contact" class="contact__btn primary-btn">
-            Let's Work Together
+            Hire Me
           </nuxt-link>
 
           <nuxt-link to="/gallery" class="sec-btn gallery-btn">
-            Browse Gallery
+            Gallery
           </nuxt-link>
         </div>
       </article>
@@ -45,7 +45,7 @@ export default {
   z-index: 1;
 
   // min-height: 40rem;
-  height: fit-content;
+  height: 100%;
   padding: 0;
   margin: 0;
 
@@ -58,34 +58,35 @@ export default {
   position: relative;
   z-index: 1;
 
-  padding: $spacing-lg 0;
+  // padding: $spacing-lg 0;
 
   height: rem(1000);
 
   .title,
   .image {
     grid-column: 1 / -1;
+    align-self: center;
   }
 
   @include screen(medium) {
-    height: rem(500);
-
-    .title {
-      grid-column: 1 / -1;
-      grid-row: 1 / -1;
-    }
-    .image {
-      grid-column: -4 / -1;
-      grid-row: 1 / -1;
-      z-index: -1;
-      margin-top: rem(200);
-    }
-  }
-  @include screen(large) {
     height: rem(600);
 
     .title {
-      grid-column: 1 / 7;
+      grid-column: 1 / 9;
+      grid-row: 1 / -1;
+    }
+    .image {
+      grid-column: 8 / -1;
+      grid-row: 1 / -1;
+      z-index: -1;
+      // margin-top: rem(100);
+    }
+  }
+  @include screen(large) {
+    height: rem(800);
+
+    .title {
+      grid-column: 1 / 6;
       grid-row: 1 / -1;
     }
     .image {

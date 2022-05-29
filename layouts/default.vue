@@ -1,17 +1,22 @@
 <template>
   <div>
     <PageNavigation />
-    <div>
+    <div class="nuxt-wrapper">
       <Nuxt />
     </div>
-    <Footer />
+    <div class="nuxt-wrapper">
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
-// import Footer from '~/components/Footer.vue'
 export default {
   name: 'DefaultLayout',
-  // components: { Footer },
 }
 </script>
+<style lang="scss" scoped>
+.nuxt-wrapper {
+  padding: 0 $spacing-md;
+}
+</style>

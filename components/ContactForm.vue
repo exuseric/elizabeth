@@ -1,5 +1,5 @@
 <template>
-  <article class="contact-form content">
+  <article class="contact-form content-container">
     <aside>
       <div class="aside__info">
         <h3 class="mark">Let's Talk</h3>

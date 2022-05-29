@@ -21,13 +21,12 @@
   </header>
 </template>
 <script>
-import LogoLink from '~/components/PageNavigation/LogoLink.vue'
 import Menu from '~/components/PageNavigation/Menu.vue'
 import MenuIcon from '~/components/Icons/MenuIcon.vue'
 import SocialLinks from '~/components/Socials.vue'
 
 export default {
-  components: { LogoLink, MenuIcon, Menu, SocialLinks },
+  components: { MenuIcon, Menu, SocialLinks },
   data() {
     return {
       isMenuOpen: false,
@@ -64,26 +63,7 @@ export default {
 }
 
 .nav__child {
-  // @include content-grid;
-  // height: fit-content;
-
-  // .top {
-  //   grid-column: 1 / -1;
-
-  //   @include screen('large') {
-  //     grid-column: 1 / 4;
-  //   }
-  // }
-
-  // .bottom {
-  //   grid-column: 1 / -1;
-
-  //   @include screen('large') {
-  //     grid-column: 4 / -1;
-  //   }
-  // }
-
-  @include screen(large) {
+  @include screen(medium) {
     @include grid-flow-col;
   }
 }
@@ -118,7 +98,7 @@ export default {
     21.3px 21.3px 37px -25px hsla(340, 49%, 8%, 0.03),
     40px 40px 63px -25px hsla(340, 49%, 8%, 0.07);
 
-  @include screen('large') {
+  @include screen(medium) {
     position: relative;
     top: 0;
     left: 0;
@@ -145,7 +125,7 @@ export default {
   padding: $spacing-lg 0;
   margin: auto;
 
-  @include screen('large') {
+  @include screen(medium) {
     padding: 0 0 0 $spacing-md;
     margin: 0 0;
   }
@@ -160,7 +140,7 @@ export default {
 
   border: 2px solid transparent;
 
-  @include screen('large') {
+  @include screen(medium) {
     visibility: hidden;
   }
 
@@ -180,13 +160,16 @@ export default {
 .nav-open {
   height: fit-content;
 
-  @include screen('large') {
+  @include screen(medium) {
     height: $nav-height;
   }
 }
 
 .hide-animate {
   animation: hide-el $transition forwards;
+  @include screen(medium) {
+    animation: show-el $transition forwards;
+  }
 }
 .show-animate {
   animation: show-el $transition forwards;

@@ -1,17 +1,14 @@
 <template>
   <main class="home">
     <IndexPageHeader />
-    <services />
-    <!-- <contact-form /> -->
+    <IndexPageServices />
+    <ContactForm />
   </main>
 </template>
 
 <script>
-// import ContactForm from '~/components/ContactForm.vue'
-import Services from '~/components/IndexPage/Services.vue'
 export default {
   name: 'HomePage',
-  components: { Services },
   layout: 'default',
 }
 </script>
