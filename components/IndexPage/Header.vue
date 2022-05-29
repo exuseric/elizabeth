@@ -79,7 +79,6 @@ export default {
       grid-column: 8 / -1;
       grid-row: 1 / -1;
       z-index: -1;
-      // margin-top: rem(100);
     }
   }
   @include screen(large) {
@@ -99,6 +98,16 @@ export default {
 
   @include screen(x-large) {
     height: rem(700);
+  }
+
+  @include screen(small) {
+    height: fit-content;
+
+    .image {
+      margin-top: rem(-250);
+      grid-column: 5 / -1;
+      width: rem(250);
+    }
   }
 }
 

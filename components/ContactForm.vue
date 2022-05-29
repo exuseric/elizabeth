@@ -1,6 +1,6 @@
 <template>
   <article class="contact-form content-container">
-    <aside>
+    <aside class="copy-container">
       <div class="aside__info">
         <h3 class="mark">Let's Talk</h3>
         <p>
@@ -75,36 +75,42 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form {
-  @include screen(large) {
-    @include content-grid;
+  @include flex-wrap-row;
 
-    form,
-    aside {
-      grid-row: 1 / -1;
-    }
-
-    form {
-      grid-column: 7 / -1;
-      width: 100%;
-    }
-
-    aside {
-      grid-column: 1 / 7;
-    }
+  form,
+  aside {
+    grid-row: 1 / -1;
   }
+  // @include screen(large) {
+  //   @include content-grid;
 
-  @include screen(x-large) {
-    @include content-grid;
-    aside {
-      grid-column: 2 / 7;
-    }
-  }
+  //   form,
+  //   aside {
+  //     grid-row: 1 / -1;
+  //   }
+
+  //   form {
+  //     grid-column: 7 / -1;
+  //     width: 100%;
+  //   }
+
+  //   aside {
+  //     grid-column: 1 / 7;
+  //   }
+  // }
+
+  // @include screen(x-large) {
+  //   @include content-grid;
+  //   aside {
+  //     grid-column: 2 / 7;
+  //   }
+  // }
 }
 aside {
   // padding: $spacing-lg 0;
 
   h3 {
-    font-size: scale('h2');
+    font-size: scale('h3');
     font-weight: 900;
 
     color: $neutral-500;
@@ -113,26 +119,22 @@ aside {
     margin-bottom: $spacing-md;
   }
 
-  @include screen(large) {
-    padding: $spacing-lg;
-  }
+  // @include screen(large) {
+  //   padding: $spacing-lg;
+  // }
 }
 .aside__social {
   padding: $spacing-md 0;
 }
 
 form {
+  width: 100%;
+  max-width: rem(500);
+  margin: auto;
+
   @include screen(medium) {
     // max-width: rem(450);
-    padding: $spacing-lg;
-    margin: auto;
-  }
-
-  @include screen(large) {
-    padding: $spacing-lg;
-  }
-  @include screen(x-large) {
-    padding: $spacing-lg $spacing-lg * 3;
+    padding: $spacing-md;
   }
 }
 
