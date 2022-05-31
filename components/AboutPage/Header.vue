@@ -56,9 +56,7 @@ export default {
   position: relative;
   z-index: 1;
 
-  // padding: $spacing-lg 0;
-
-  height: rem(800);
+  height: rem(1000);
 
   .title,
   .image {
@@ -66,32 +64,52 @@ export default {
     align-self: center;
   }
 
-  @include screen(medium) {
-    height: rem(600);
+  @include screen(small) {
+    height: rem(500);
 
     .title {
-      grid-column: 1 / 9;
-      grid-row: 1 / -1;
+      grid-column: 1 / 4;
     }
+
     .image {
-      grid-column: 8 / -1;
-      grid-row: 1 / -1;
-      z-index: -1;
-      // margin-top: rem(100);
+      grid-column: 4 / -1;
+      // margin-top: rem(-250);
+      width: 100%;
+      height: inherit;
     }
   }
-  @include screen(large) {
-    height: rem(800);
+
+  @include screen(medium) {
+    height: rem(600);
+    padding: $spacing-md 0;
 
     .title {
       grid-column: 1 / 6;
       grid-row: 1 / -1;
     }
     .image {
-      justify-self: space-between;
-      grid-column: 8 / -1;
+      grid-column: 6 / -1;
+      grid-row: 1 / -1;
+      z-index: -1;
+      width: 100%;
+      height: inherit;
+      margin-top: 0;
+    }
+  }
+  @include screen(large) {
+    height: rem(800);
+    padding: $spacing-lg 0;
+
+    .title {
+      grid-column: 1 / 6;
+      grid-row: 1 / -1;
+    }
+    .image {
+      grid-column: 6 / -1;
       grid-row: 1 / -1;
       margin-top: 0;
+      width: 100%;
+      height: inherit;
     }
   }
 
@@ -101,18 +119,12 @@ export default {
 }
 
 .image {
-  width: rem(300);
-  height: auto;
+  width: auto;
+
   margin: auto;
 
-  @include screen(large) {
-    width: rem(450);
-    height: auto;
-  }
-
-  @include screen(x-large) {
-    width: rem(550);
-    height: auto;
+  img {
+    object-fit: contain;
   }
 }
 
